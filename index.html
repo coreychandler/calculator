@@ -13,32 +13,35 @@
     <main class="calccontainer">
         <div class="calcheader">
             <div class="branding">
-                <p>Casio <br> T-1000</p>
+                <p>Calc <br> T-1000</p>
             </div>
             <div class="solarpanel"></div>
         </div>
-        <div class="calcdisplay"></div>
+        <div class="calcdisplay">
+            <p class="formula"></p>
+            <p class="userinput"></p>
+        </div>
         <div class="cleardelete">
             <button class="btn bigbtn" id="clear">C</button>
             <button class="btn bigbtn" id="delete">DELETE</button> 
         </div>
         <div class="buttoncontainer">
-            <button class="btn">7</button>
-            <button class="btn">8</button>
-            <button class="btn">9</button>
-            <button class="btn">x</button>
-            <button class="btn">4</button>
-            <button class="btn">5</button>
-            <button class="btn">6</button>
-            <button class="btn">/</button>
-            <button class="btn">1</button>
-            <button class="btn">2</button>
-            <button class="btn">3</button>
-            <button class="btn">-</button>
-            <button class="btn">.</button>
-            <button class="btn">0</button>
+            <button data-number class="btn">7</button>
+            <button data-number class="btn">8</button>
+            <button data-number class="btn">9</button>
+            <button data-operator class="btn">x</button>
+            <button data-number class="btn">4</button>
+            <button data-number class="btn">5</button>
+            <button data-number class="btn">6</button>
+            <button data-operator class="btn">/</button>
+            <button data-number class="btn">1</button>
+            <button data-number class="btn">2</button>
+            <button data-number class="btn">3</button>
+            <button data-operator class="btn">-</button>
+            <button data-operator class="btn">.</button>
+            <button data-number class="btn">0</button>
             <button class="btn" id="equals">=</button>
-            <button class="btn">+</button>
+            <button data-operator class="btn">+</button>
 
 
 

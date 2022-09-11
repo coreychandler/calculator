@@ -46,12 +46,26 @@ body {
 }
 
 .calcdisplay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
     width: 350px;
     height: 80px;
     background-color: lightslategray;
     margin: 15px 20px;
     border-radius: 5px;
     border: 2px #333 solid;
+    padding-right: 10px;
+}
+
+.userinput {
+    font-size: 32px;
+    margin: 0px;
+}
+
+.formula {
+    margin: 0px 0px;
 }
 
 .buttoncontainer {
