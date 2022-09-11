@@ -1,7 +1,7 @@
 * {
     /* border: 1px solid green; */
     box-sizing: border-box;
-
+    font-family: lato,sans-serif;
 }
 
 body {
@@ -26,7 +26,6 @@ body {
     width: 80px;
     margin: 5px 5px;
     border-radius: 5px;
-    font-family: lato,sans-serif;
     font-weight: 500;
     font-size: 20px;
     font-style: normal;
@@ -65,4 +64,24 @@ body {
 .cleardelete{
     display: flex;
     justify-content: space-between;
+}
+
+.calcheader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 350px;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    height: 60px;
+    margin-top: 10px;
+}
+
+.solarpanel {
+    width: 100px;
+    background-color: rgb(90, 53, 28);
+    border: 2px #333 solid;
+    border-radius: 5px;
+    height: 25px;
 }
