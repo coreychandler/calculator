@@ -15,21 +15,26 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 400px;
+    --calcContainerWidth: 400px;
+    width: var(--calcContainerWidth);
     background-color: rgb(166, 175, 175);
     border-radius: 10px;
     border: 2px #333 solid;
 }
 
 .btn {
-    height: 80px;
-    width: 80px;
+    height: calc(var(--calcContainerWidth) / 5);
+    width: calc(var(--calcContainerWidth) / 5);
     margin: 5px 5px;
     border-radius: 5px;
     font-weight: 500;
     font-size: 20px;
     font-style: normal;
     
+}
+
+.altbtn {
+
 }
 
 .bigbtn {
@@ -51,7 +56,7 @@ body {
     justify-content: center;
     align-items: flex-end;
     width: 350px;
-    height: 80px;
+    height: calc(var(--calcContainerWidth) / 5);
     background-color: lightslategray;
     margin: 15px 20px;
     border-radius: 5px;

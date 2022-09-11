@@ -5,13 +5,15 @@ const operatorButtons = document.querySelectorAll("button[data-operator]");
 const clearButton = document.querySelector("#clear");
 const equalsButton = document.querySelector("#equals");
 const dotButton = document.querySelector("#dot");
+const deleteButton = document.querySelector("#delete");
 
-
+document.addEventListener("DOMContentLoaded", handleLoad);
 document.addEventListener("keydown", handleKeydown);
 clearButton.addEventListener("click", handleClearButton);
 equalsButton.addEventListener("click", handleEqualsButton);
 dotButton.addEventListener("click", handleDotButton);
-document.addEventListener("DOMContentLoaded", handleLoad);
+deleteButton.addEventListener("click", handleDeleteButton);
+
 
 
 let firstOperand;
@@ -88,6 +90,10 @@ function handleDotButton(e) {
     if(userInput.textContent.includes(".")) {return};
 
     userInput.textContent += ".";
+}
+
+function handleDeleteButton(e) {
+    userInput.textContent = userInput.textContent.substring(0, userInput.textContent.length -1);
 }
 
 function handleEqualsButton(e) {
