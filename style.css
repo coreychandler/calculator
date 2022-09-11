@@ -30,11 +30,20 @@ body {
     font-weight: 500;
     font-size: 20px;
     font-style: normal;
+    
 }
 
 .bigbtn {
     height: 80px;
     width: 170px;
+}
+
+#clear {
+    background-color: rgb(255, 155, 109);
+}
+
+#delete {
+
 }
 
 .calcdisplay {
