@@ -4,18 +4,20 @@ const numButtons = document.querySelectorAll("button[data-number]");
 const operatorButtons = document.querySelectorAll("button[data-operator]");
 const clearButton = document.querySelector("#clear");
 const equalsButton = document.querySelector("#equals");
+const dotButton = document.querySelector("#dot");
 
 
 document.addEventListener("keydown", handleKeydown);
 clearButton.addEventListener("click", handleClearButton);
 equalsButton.addEventListener("click", handleEqualsButton);
+dotButton.addEventListener("click", handleDotButton);
 document.addEventListener("DOMContentLoaded", handleLoad);
 
 
 let firstOperand;
 let secondOperand;
 let currentOperator;
-let enteredSecondValue;
+let enteredSecondValue = false;
 let clearNext = false;
 let formulaValue;
 let operatorWasPressed = false;
@@ -62,7 +64,7 @@ function handleKeydown(e) {
 
 
 function handleOperatorClick(e) {
-    if (enteredSecondValue !== "") {
+    if (enteredSecondValue ) {
         formula.textContent = operate(currentOperator, firstOperand, secondOperand) + " " + e.target.innerText;
         handleEqualsButton(e);
     }
@@ -82,6 +84,12 @@ function handleClearButton(e) {
     formula.textContent = "";
 }
 
+function handleDotButton(e) {
+    if(userInput.textContent.includes(".")) {return};
+
+    userInput.textContent += ".";
+}
+
 function handleEqualsButton(e) {
     if (!enteredSecondValue || firstOperand === "") return;
     secondOperand = Number(userInput.textContent);
@@ -95,6 +103,7 @@ function handleEqualsButton(e) {
         formula.textContent = "";
     } 
     operatorWasPressed = false;
+    enteredSecondValue = false;
 }
 
 numButtons.forEach((btn) => {
@@ -139,13 +148,13 @@ function divide(a, b) {
 function operate(operator, num1, num2) {
     switch (operator) {
         case "x":
-            return multiply(num1, num2);
+            return +multiply(num1, num2).toFixed(3);
         case "/":
-            return divide(num1, num2)
+            return +divide(num1, num2).toFixed(3);
         case "+":
-            return add(num1, num2)
+            return +add(num1, num2).toFixed(3);
         case "-":
-            return subtract(num1, num2)
+            return +subtract(num1, num2).toFixed(3);
         default:
             return 0;
     }

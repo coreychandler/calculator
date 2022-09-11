@@ -1,1 +1,1 @@
-A simple web-based calculator with keyboard support
+A simple web-based calculator with keyboard support. Logic could be cleaned up and needs key input support, will work on this next
