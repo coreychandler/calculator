@@ -27,15 +27,27 @@ body {
     width: calc(var(--calcContainerWidth) / 5);
     margin: 5px 5px;
     border-radius: 5px;
+    border: 2px #333 solid;
     font-weight: 500;
     font-size: 20px;
     font-style: normal;
     
 }
 
-.altbtn {
+.btn:active{
+    background-color: rgb(182, 182, 182);
+    transform: translateY(4px);
+  }
 
-}
+.keyclick {
+        background-color: rgb(182, 182, 182);
+        transform: translateY(4px);
+      }
+
+#clear:active{
+    background-color: rgb(201, 122, 85);
+    transform: translateY(4px);
+  }
 
 .bigbtn {
     height: 80px;
